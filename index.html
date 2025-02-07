@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Question</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #yesButton, #noButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #yesButton {
+            transition: transform 0.3s;
+        }
+        #spinningCat {
+            width: 100px;
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my Valentine?</h1>
+    <img id="spinningCat" src="rcat.gif" alt="Spinning Cat">
+    <div>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <img id="yipeeCat" src="yipeecat.gif" alt="Yipee Cat" style="display: none;">
+
+    <script>
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        const yipeeCat = document.getElementById('yipeeCat');
+
+        noButton.addEventListener('click', () => {
+            yesButton.style.transform = 'scale(1.5)';
+        });
+
+        yesButton.addEventListener('click', () => {
+            yesButton.style.display = 'none';
+            noButton.style.display = 'none';
+            yipeeCat.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
