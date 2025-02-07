@@ -40,7 +40,7 @@ function flashRainbowColors(callback) {
 function displayCat() {
     var imageContainer = document.getElementById('image-container');
     var catImage = new Image();
-    catImage.src = 'rcat.gif'; // Ensure this path is correct
+    catImage.src = 'cat.gif'; // Ensure this path is correct
     catImage.alt = 'Cat';
     catImage.style.width = '300px'; // Optional: Set image width
     catImage.style.height = 'auto'; // Maintain aspect ratio
